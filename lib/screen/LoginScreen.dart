@@ -1,0 +1,255 @@
+import 'package:flutter/material.dart';
+import 'package:icons_plus/icons_plus.dart';
+
+import 'ForgotPasswordScreen.dart';
+
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Padding(
+            padding: const EdgeInsets.all(8),
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              child: SingleChildScrollView(
+                child: Column(
+                  //crossAxisAlignment: CrossAxisAlignment.start,
+                  
+                  children: [
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: const Icon(Icons.chevron_left, size: 40),
+                        )
+                      ],
+                    ),
+                    Container(
+                      width: 90,
+                      height: 90,
+                      decoration: const BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.all(Radius.circular(45))),
+                      child: const Center(
+                        child: Icon(LineAwesome.angular,
+                            color: Colors.white, size: 50),
+                      ),
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Login",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                fontSize: 25, fontWeight: FontWeight.bold),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "Login to continue use the app",
+                            style: TextStyle(color: Colors.grey, fontSize: 18),
+                          ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          const Text("Email",
+                              style: TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.bold)),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide.none,
+                                borderRadius: BorderRadius.circular(50.0),
+                              ),
+                              filled: true,
+                              hintStyle: TextStyle(
+                                  fontSize: 18,
+                                  color:
+                                      const Color.fromARGB(255, 112, 110, 110),
+                                  fontWeight: FontWeight.bold),
+                              hintText: "Enter your email",
+                              fillColor: Color.fromARGB(179, 235, 232, 232),
+                            ),
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          const Text("Password",
+                              style: TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.bold)),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          TextField(
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              suffixIcon: IconButton(
+                                  onPressed: () {},
+                                  icon: Icon(Icons.remove_red_eye)),
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide.none,
+                                borderRadius: BorderRadius.circular(50.0),
+                              ),
+                              filled: true,
+                              hintStyle: const TextStyle(
+                                  fontSize: 18,
+                                  color:
+                                      Color.fromARGB(255, 112, 110, 110),
+                                  fontWeight: FontWeight.bold),
+                              hintText: "Enter your password",
+                              fillColor: Color.fromARGB(179, 235, 232, 232),
+                            ),
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const ForgotPasswordScreen()));
+                                  },
+                                  child: const Text("Forgot password",
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          color: Color.fromARGB(
+                                              255, 165, 164, 164))))
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.blue,
+                                  shape: RoundedRectangleBorder(
+                                      side: const BorderSide(
+                                          width: 8, // thickness
+                                          color: Colors.blue // color
+                                          ),
+                                      // border radius
+                                      borderRadius: BorderRadius.circular(30))),
+                              onPressed: () {},
+                              child: const SizedBox(
+                                height: 60,
+                                child: Center(
+                                  child: Text("Login",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20)),
+                                ),
+                              )),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                  width: MediaQuery.of(context).size.width * .3,
+                                  height: 2,
+                                  decoration:
+                                      const BoxDecoration(color: Colors.grey)),
+                              const Text(
+                                "Or Login With",
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    color: Color.fromARGB(255, 85, 83, 83)),
+                              ),
+                              Container(
+                                  width: MediaQuery.of(context).size.width * .3,
+                                  height: 2,
+                                  decoration:
+                                      const BoxDecoration(color: Colors.grey)),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                    elevation: 0,
+                                    backgroundColor: Colors.white),
+                                child: Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            width: 2, color: Colors.grey),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(10))),
+                                    child:
+                                        Center(child: Logo(Logos.facebook_f))),
+                              ),
+                              ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                    elevation: 0,
+                                    backgroundColor: Colors.white),
+                                child: Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            width: 2, color: Colors.grey),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(10))),
+                                    child: Center(child: Logo(Logos.google))),
+                              ),
+                              ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                    elevation: 0,
+                                    backgroundColor: Colors.white),
+                                child: Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            width: 2, color: Colors.grey),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(10))),
+                                    child: Center(child: Logo(Logos.apple))),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            )));
+  }
+}
