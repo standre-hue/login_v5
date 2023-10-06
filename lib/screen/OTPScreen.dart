@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_const
+
 import 'package:flutter/material.dart';
 
 import 'NewPasswordScreen.dart';
@@ -51,70 +53,70 @@ class _OTPScreenState extends State<OTPScreen> {
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              SizedBox(
+                height: 60,
+                width: 60,
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    filled: true,
+                    hintStyle: TextStyle(
+                        fontSize: 18,
+                        color: const Color.fromARGB(255, 112, 110, 110),
+                        fontWeight: FontWeight.bold),
+                    hintText: "",
+                    fillColor: Color.fromARGB(179, 235, 232, 232),
+                  ),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                ),
+              ),
+                        const SizedBox(
+                height: 60,
+                width: 60,
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    filled: true,
+                    hintStyle: TextStyle(
+                        fontSize: 18,
+                        color: const Color.fromARGB(255, 112, 110, 110),
+                        fontWeight: FontWeight.bold),
+                    hintText: "",
+                    fillColor: Color.fromARGB(179, 235, 232, 232),
+                  ),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                ),
+              ),
+                        const SizedBox(
+                height: 60,
+                width: 60,
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    filled: true,
+                    hintStyle: TextStyle(
+                        fontSize: 18,
+                        color: const Color.fromARGB(255, 112, 110, 110),
+                        fontWeight: FontWeight.bold),
+                    hintText: "",
+                    fillColor: Color.fromARGB(179, 235, 232, 232),
+                  ),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                ),
+              ),
               const SizedBox(
-                height: 60,
-                width: 60,
-                child: TextField(
-                  keyboardType: TextInputType.number,
-                  textAlign: TextAlign.center,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
-                    filled: true,
-                    hintStyle: TextStyle(
-                        fontSize: 18,
-                        color: const Color.fromARGB(255, 112, 110, 110),
-                        fontWeight: FontWeight.bold),
-                    hintText: "",
-                    fillColor: Color.fromARGB(179, 235, 232, 232),
-                  ),
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
-                ),
-              ),
-                        const SizedBox(
-                height: 60,
-                width: 60,
-                child: TextField(
-                  keyboardType: TextInputType.number,
-                  textAlign: TextAlign.center,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
-                    filled: true,
-                    hintStyle: TextStyle(
-                        fontSize: 18,
-                        color: const Color.fromARGB(255, 112, 110, 110),
-                        fontWeight: FontWeight.bold),
-                    hintText: "",
-                    fillColor: Color.fromARGB(179, 235, 232, 232),
-                  ),
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
-                ),
-              ),
-                        const SizedBox(
-                height: 60,
-                width: 60,
-                child: TextField(
-                  keyboardType: TextInputType.number,
-                  textAlign: TextAlign.center,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
-                    filled: true,
-                    hintStyle: TextStyle(
-                        fontSize: 18,
-                        color: const Color.fromARGB(255, 112, 110, 110),
-                        fontWeight: FontWeight.bold),
-                    hintText: "",
-                    fillColor: Color.fromARGB(179, 235, 232, 232),
-                  ),
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
-                ),
-              ),
-                        const SizedBox(
                 height: 60,
                 width: 60,
                 child: TextField(

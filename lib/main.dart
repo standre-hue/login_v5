@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_v5/screen/WelcomeScreen.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
@@ -11,13 +12,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      /*theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),*/
         //useMaterial3: true,
-      ),
+      //),
       home: const WelcomeScreen(),
     );
   }
